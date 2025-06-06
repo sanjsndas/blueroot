@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BlueRoot Garden Irrigation Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #2a7f62;
+      --secondary-color: #4fb286;
+      --accent-color: #62c370;
+      --background-color: #f0f9f4;
+      --text-color: #1a3d2f;
+      --heading-font: 'Montserrat', sans-serif;
+      --body-font: 'Roboto', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--background-color);
+      font-family: var(--body-font);
+      color: var(--text-color);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    header {
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem 5rem 1rem;
+      background: linear-gradient(rgba(42,127,98,0.8), rgba(42,127,98,0.8)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    header h1 {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 3.6rem;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    header p {
+      margin-top: 0.8rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    }
+    nav {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      z-index: 10;
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      background: rgba(255 255 255 / 0.15);
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.4s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      user-select: none;
+      cursor: pointer;
+    }
+    nav a:hover,
+    nav a:focus {
+      background: var(--accent-color);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(97,199,112,0.8);
+      outline: none;
+      text-decoration: none;
+    }
+    main {
+      max-width: 960px;
+      margin: 3rem auto 6rem auto;
+      padding: 0 1.2rem;
+    }
+    section {
+      margin-bottom: 4rem;
+      position: relative;
+    }
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 2.4rem;
+      color: var(--primary-color);
+      margin-bottom: 1.6rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 4px solid var(--accent-color);
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+    h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 1.2rem;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #234933;
+    }
+    ul {
+      margin-left: 1.2rem;
+      color: #3d5a40;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      list-style-type: disc;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    .image-container {
+      text-align: center;
+      margin: 2.4rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+      max-width: 100%;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      transition: transform 0.35s ease;
+      border-radius: 12px;
+      cursor: pointer;
+      will-change: transform;
+    }
+    .image-container img:hover,
+    .image-container img:focus {
+      transform: scale(1.08);
+      outline: none;
+    }
+    .service-pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2rem 1.8rem 1.8rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 22px rgba(39,111,78,0.12);
+      transition: box-shadow 0.35s ease, transform 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 300px;
+    }
+    .service-card:hover,
+    .service-card:focus-within {
+      box-shadow: 0 14px 38px rgba(46,147,96,0.3);
+      transform: translateY(-6px);
+      outline: none;
+    }
+    .service-card img {
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+      max-height: 140px;
+      object-fit: cover;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .service-card img:hover,
+    .service-card img:focus {
+      transform: scale(1.05);
+      outline: none;
+    }
+    .service-card h4 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-family: var(--heading-font);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .service-card p {
+      flex-grow: 1;
+      color: #3a6048;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    .price {
+      margin-top: auto;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      font-family: var(--heading-font);
+      letter-spacing: 0.07em;
+      text-align: right;
+    }
+    /* Section separators with subtle wave shape */
+    section[id="services"]::before,
+    section.customer-satisfaction::before,
+    section[id="disclaimer"]::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -3.5rem;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: var(--background-color);
+      clip-path: ellipse(100% 60% at 50% 100%);
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.04));
+      z-index: 0;
+    }
+    blockquote {
+      font-style: italic;
+      font-weight: 500;
+      color: #456d4b;
+      border-left: 5px solid var(--secondary-color);
+      padding-left: 1.15rem;
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+      box-shadow: 3px 3px 12px rgba(21,88,49,0.05);
+      background: #e1f6dc;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    blockquote p {
+      margin: 0.6rem 0;
+    }
+    footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 2rem 1rem 3rem 1rem;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.25);
+      letter-spacing: 0.05em;
+    }
+    footer address {
+      font-style: normal;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    footer a {
+      text-decoration: none;
+      color: #ade5be;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    footer a:hover,
+    footer a:focus {
+      color: #d0fff3;
+      outline: none;
+    }
+    footer p {
+      opacity: 0.84;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    /* Footer icons inline */
+    footer address::before {
+      content: "\1F4CD";
+      margin-right: 6px;
+      font-size: 1.1rem;
+      vertical-align: middle;
+    }
+    footer address a::before {
+      content: "\260E";
+      margin-right: 8px;
+      font-size: 1.2rem;
+      vertical-align: middle;
+      color: #ade5be;
+      transition: color 0.3s ease;
+    }
+    footer address a:hover::before,
+    footer address a:focus::before {
+      color: #d0fff3;
+      outline: none;
+    }
+    .disclaimer, .customer-satisfaction {
+      background: white;
+      padding: 2rem 2.2rem;
+      border-radius: 14px;
+      box-shadow: 0 9px 26px rgba(70,130,80,0.08);
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+      color: #2d6242;
+    }
+    .disclaimer h3, .customer-satisfaction h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 1.9rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.1em;
+    }
+    /* Responsive adjustments */
+    @media screen and (max-width: 720px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .service-pricing {
+        grid-template-columns: 1fr;
+      }
+      .service-card {
+        min-height: unset;
+      }
+      footer address {
+        font-size: 0.92rem;
+      }
+      footer p {
+        font-size: 0.86rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BlueRoot Garden Irrigation</h1>
+    <p>Enhancing Your Garden’s Health with Smart Irrigation Solutions</p>
+   <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms and Conditions</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  </header>
+  <main>
+    <section id="about" tabindex="0" aria-label="Introduction to BlueRoot Garden Irrigation">
+      <h2>Welcome to BlueRoot Garden Irrigation</h2>
+      <p>
+        At BlueRoot Garden Irrigation, we understand the importance of efficient water management for your garden. Whether you’re a passionate gardener or a professional landscaper, our cutting-edge irrigation solutions are designed to conserve water while keeping your plants thriving. With years of expertise, our team specializes in designing and installing customized irrigation systems that perfectly match the unique requirements of your garden space.
+      </p>
+      <p>
+        Our mission is simple: to provide reliable, eco-friendly, and cost-effective irrigation services that help your garden flourish through smart watering techniques. We prioritize sustainable practices that not only reduce water wastage but also promote healthier soil and stronger root systems.
+      </p>
+      <div class="image-container">
+        <img src="p1.jpg" alt="Sprinkler watering a lush garden" tabindex="0" />
+      </div>
+      <p>
+        Every garden has different needs based on size, soil type, plant selection, and sunlight exposure. BlueRoot's team conducts a thorough assessment before recommending the most suitable irrigation system, including drip irrigation, sprinkler systems, or smart controllers that adapt watering schedules automatically according to weather conditions.
+      </p>
+      <p>
+        Water conservation is at the core of our service offerings. Our products are selected from industry-leading brands known for durability, efficiency, and technology. From residential gardens to commercial landscapes, we promise a seamless installation experience and ongoing maintenance support.
+      </p>
+      <p>
+        Join hundreds of satisfied customers who have experienced lush, healthy gardens cared for with precision irrigation techniques from BlueRoot Garden Irrigation.
+      </p>
+    </section>
+    <section id="services" tabindex="0" aria-label="Description of services and pricing">
+      <h2>Our Services &amp; Pricing</h2>
+      <p>
+        BlueRoot Garden Irrigation offers a variety of services tailored to meet all your garden watering needs. Whether installing a new system or upgrading an existing one, you can trust our expertise backed by transparent pricing to help you plan and budget confidently.
+      </p>
+      <div class="service-pricing">
+        <article class="service-card" tabindex="0" aria-label="Custom Irrigation Design service">
+          <img src="s1.jpg" alt="Blueprint and layout plan" loading="lazy" />
+          <h4>Custom Irrigation Design</h4>
+          <p>We create a personalized irrigation plan tailored to your garden’s layout, plant types, and soil conditions for optimal water use.</p>
+          <p class="price" aria-label="Price range: one hundred fifty to three hundred fifty dollars">$150 - $350</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Sprinkler System Installation service">
+          <img src="s2.jpg" alt="Sprinkler installation in garden" loading="lazy" />
+          <h4>Sprinkler System Installation</h4>
+          <p>Professional installation of above-ground and in-ground sprinklers for up to 1,500 sq.ft., ensuring even water distribution in lawns and garden beds.</p>
+          <p class="price" aria-label="Price range: five hundred to one thousand two hundred dollars">$500 - $1,200</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Drip Irrigation Setup service">
+          <img src="s3.jpg" alt="Drip irrigation system on flowerbed" loading="lazy" />
+          <h4>Drip Irrigation Setup</h4>
+          <p>Efficient targeted watering system installation for flower beds, vegetable patches, and shrubs to minimize evaporation and runoff.</p>
+          <p class="price" aria-label="Price range: three hundred to nine hundred dollars">$300 - $900</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Smart Controller and Automation service">
+          <img src="s4.jpg" alt="Smart irrigation controller device" loading="lazy" />
+          <h4>Smart Irrigation Controllers &amp; Automation</h4>
+          <p>Installation and configuration of smart irrigation controllers that adjust watering schedules based on real-time weather data and soil moisture sensors.</p>
+          <p class="price" aria-label="Price range: two hundred fifty to six hundred dollars">$250 - $600</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Maintenance and Repair service">
+          <img src="s5.jpg" alt="Technician repairing irrigation system" loading="lazy" />
+          <h4>Maintenance &amp; Repair</h4>
+          <p>Seasonal check-ups, leak detection, repairs, and system upgrades to keep your irrigation running smoothly and efficiently.</p>
+          <p class="price" aria-label="Starting price: one hundred dollars per visit">Starting at $100 / visit</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Water Audit and Consulting service">
+          <img src="s6.jpg" alt="Water audit consultation" loading="lazy" />
+          <h4>Water Audit &amp; Consulting</h4>
+          <p>Expert assessment and consultation aimed at optimizing water usage and reducing irrigation costs.</p>
+          <p class="price" aria-label="Price per audit: two hundred dollars">$200 per audit</p>
+        </article>
+      </div>
+    </section>
+    <section class="customer-satisfaction" tabindex="0" aria-label="Customer satisfaction and reviews">
+      <h3>Customer Satisfaction</h3>
+      <p>
+        At BlueRoot Garden Irrigation, customer satisfaction is our highest priority. We pride ourselves on delivering quality service, transparent communication, and reliable systems. Our technicians undergo regular training and certification to stay current with best practices and product innovations.
+      </p>
+      <p>
+        We stand behind our work with a satisfaction guarantee and offer ongoing support to resolve any issues promptly. Our customers appreciate our commitment to improving garden health through smart irrigation that saves water and money.
+      </p>
+      <p>
+        Don’t take our word for it — here’s what some of our clients have to say:
+      </p>
+      <blockquote tabindex="0">
+        <p>"BlueRoot transformed my garden with a smart irrigation system that’s easy to use and saves me so much water! Their team was professional and friendly throughout the process." – Sarah L.</p>
+        <p>"Their maintenance service keeps my sprinklers in perfect shape. I highly recommend BlueRoot for anyone serious about their garden." – James K.</p>
+      </blockquote>
+    </section>
+    <section id="disclaimer" class="disclaimer" tabindex="0" aria-label="Disclaimer and legal information">
+      <h3>Disclaimer</h3>
+      <p>
+        BlueRoot Garden Irrigation strives to provide accurate product descriptions and service information. However, due to variations in garden conditions and local regulations, actual results may vary. We recommend an on-site consultation to receive customized advice and pricing.
+      </p>
+      <p>
+        Our services comply with all applicable environmental and safety standards. Any warranties or guarantees apply only to the products and services provided directly by BlueRoot unless otherwise specified. We are not responsible for damages resulting from external factors such as extreme weather or unauthorized system modifications.
+      </p>
+      <p>
+        Please ensure regular maintenance to prevent possible water damage or system malfunctions. BlueRoot disclaims liability for any incidental or consequential damages.
+      </p>
+    </section>
+  </main>
+
+  <footer id="contact" role="contentinfo" tabindex="0" aria-label="Contact information">
+    <address>
+      BlueRoot Garden Irrigation<br />
+      9191 Old Seward Hwy,<br />
+     Anchorage Alaska 99515<br />
+      Phone: <a href="tel:+12345678900">(855) 555-6677</a>
+    </address>
+    <p>&copy; 2024 BlueRoot Garden Irrigation. All rights reserved.</p>
+  </footer>
+</body>
+</html>

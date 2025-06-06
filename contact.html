@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - BlueRoot Garden Irrigation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #2a7f62;
+      --secondary-color: #4fb286;
+      --accent-color: #62c370;
+      --background-color: #f0f9f4;
+      --text-color: #1a3d2f;
+      --heading-font: 'Montserrat', sans-serif;
+      --body-font: 'Roboto', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--background-color);
+      font-family: var(--body-font);
+      color: var(--text-color);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    header {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    nav {
+      background: var(--secondary-color);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header h1 {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1.2rem;
+    }
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 1.2rem;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #234933;
+    }
+    footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.25);
+      letter-spacing: 0.05em;
+    }
+    footer address {
+      font-style: normal;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    footer a {
+      text-decoration: none;
+      color: #ade5be;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    footer a:hover,
+    footer a:focus {
+      color: #d0fff3;
+      outline: none;
+    }
+    footer p {
+      opacity: 0.84;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .contact-form button:hover {
+      background: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BlueRoot Garden Irrigation</h1>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms and Conditions</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  </header>
+  <main>
+    <h2>Contact Us</h2>
+    <p>
+      At BlueRoot Garden Irrigation, we value your feedback and inquiries. Whether you have questions about our services, need assistance with your irrigation system, or want to schedule a consultation, we are here to help. Our dedicated team is committed to providing you with the best customer service experience possible.
+    </p>
+    
+    <h3>Our Location</h3>
+    <p>
+      We are located at:
+    </p>
+    <address>
+      BlueRoot Garden Irrigation<br />
+      9191 Old Seward Hwy,<br />
+      Anchorage, Alaska 99215<br />
+      Phone: (855) 555-6677<br />
+      Email: <a href="mailto:info@bluerootgarden.com">info@bluerootgarden.com</a>
+    </address>
+    <p>
+      Our office hours are Monday to Friday, from 9:00 AM to 5:00 PM. We are closed on weekends and public holidays. Feel free to visit us during our business hours, or contact us via phone or email for any inquiries.
+    </p>
+
+    <h3>Contact Form</h3>
+    <p>
+      To make it easier for you to reach out to us, we have provided a contact form below. Please fill out the form with your details and message, and we will get back to you as soon as possible.
+    </p>
+    <div class="contact-form">
+      <form action="submit_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <h3>Frequently Asked Questions</h3>
+    <p>
+      Here are some common questions we receive from our customers:
+    </p>
+    <h4>1. What services do you offer?</h4>
+    <p>
+      We offer a range of irrigation services, including custom irrigation design, sprinkler system installation, drip irrigation setup, maintenance and repair, and smart irrigation solutions. Our team is equipped to handle both residential and commercial projects.
+    </p>
+
+    <h4>2. How can I schedule a consultation?</h4>
+    <p>
+      You can schedule a consultation by contacting us via phone or email, or by filling out the contact form above. We will work with you to find a convenient time for your consultation.
+    </p>
+
+    <h4>3. Do you provide free estimates?</h4>
+    <p>
+      Yes, we provide free estimates for our services. During the consultation, we will assess your needs and provide you with a detailed estimate based on your specific requirements.
+    </p>
+
+    <h4>4. What areas do you serve?</h4>
+    <p>
+      We serve Springfield and the surrounding areas. If you are unsure whether we cover your location, please contact us, and we will be happy to assist you.
+    </p>
+
+    <h4>5. What should I do if I have an emergency with my irrigation system?</h4>
+    <p>
+      If you experience an emergency with your irrigation system, please call us immediately at (123) 456-7890. Our team is available to assist you with urgent issues and will work to resolve the problem as quickly as possible.
+    </p>
+
+    <h3>Customer Testimonials</h3>
+    <p>
+      We take pride in our work and strive to provide the best service possible. Here are some testimonials from our satisfied customers:
+    </p>
+    <blockquote>
+      <p>"BlueRoot Garden Irrigation transformed my garden! Their team was professional, and the installation was seamless. Highly recommend!" – Sarah L.</p>
+    </blockquote>
+    <blockquote>
+      <p>"I had a great experience with BlueRoot. They were responsive and provided excellent service. My irrigation system works perfectly!" – John D.</p>
+    </blockquote>
+
+    <h3>Get in Touch</h3>
+    <p>
+      We look forward to hearing from you! Whether you have questions, need assistance, or want to schedule a service, don’t hesitate to reach out. Your satisfaction is our priority, and we are here to help you achieve a beautiful and healthy garden.
+    </p>
+  </main>
+  <footer>
+    <p>&copy; 2023 BlueRoot Garden Irrigation. All rights reserved.</p>
+    <address>
+      9191 Old Seward Hwy, Anchorage, Alaska 99215<br />
+      Phone: (855) 555-6677
+    </address>
+  </footer>
+</body>
+</html>
